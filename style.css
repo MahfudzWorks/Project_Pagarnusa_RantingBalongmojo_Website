@@ -1,0 +1,705 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 15px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.navbar-logo h1 {
+  font-size: 12px;
+  font-weight: 700;
+  width: 95px;
+  height: 28px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #03c400;
+}
+
+/* Hamberger menu */
+.hamberger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamberger-menu img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Animation */
+/* Fade-in dari kiri */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in dari kanan */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in dari atas */
+.fade-in-top {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-in dari bawah */
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-in dari pusat (membesar) */
+.fade-in-center {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-center.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Home */
+.home {
+  height: 100vh;
+  background-image: url("img/gambarbg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.home-container {
+}
+
+.home-logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.home-container h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.home-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.home-container button {
+  width: 130px;
+  height: 40px;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #1d5f1c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-container button:hover {
+  background-color: #016000;
+}
+
+/* Sejarah */
+.sejarah-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.sejarah-container h1 {
+  display: inline-block;
+  font-size: 26px;
+  color: #1d5f1c;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.sejarah-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 91px;
+  height: 3px;
+  background-color: #1d5f1c;
+}
+
+.sejarah-content {
+  width: 100%;
+  max-width: 1035px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  justify-items: center;
+  padding-top: 45px;
+}
+
+.sejarah-content img {
+  height: auto;
+  width: 500px;
+}
+
+.text {
+  width: 500px;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: left;
+}
+
+/* Visi dan Misi */
+.visidanmisi-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.visidanmisi-container h1 {
+  display: inline-block;
+  font-size: 26px;
+  color: #1d5f1c;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.visidanmisi-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 154px;
+  height: 3px;
+  background-color: #1d5f1c;
+}
+
+.visidanmisi-content {
+  width: 100%;
+  max-width: 1035px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 45px;
+}
+
+.text-section {
+  width: 50%;
+  text-align: left;
+}
+
+.text-section h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #103e1c;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-section ol {
+  padding-left: 20px;
+}
+
+.text-section ol li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.image-section {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+  justify-items: center;
+}
+
+.image-group {
+  width: 440px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-group img {
+  width: 200px;
+  height: 134px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-group img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-group p {
+  width: 196px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #103e1c;
+}
+
+/* Tentang Kami */
+.tentangkami-container {
+  text-align: center;
+  padding: 45px 200px;
+}
+
+.tentangkami-container h1 {
+  display: inline-block;
+  font-size: 26px;
+  color: #1d5f1c;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.tentangkami-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 167px;
+  height: 3px;
+  background-color: #1d5f1c;
+}
+
+.tentangkami-content {
+  padding-top: 45px;
+}
+
+.tentangkami-logo img {
+  width: 110px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.baca-selengkapnya {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d5f1c;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #016000;
+}
+
+/* Footer */
+footer {
+  background-color: #103e1c;
+  color: #ffffff;
+  width: 100%;
+  height: 355px;
+  padding: 70px 100px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  width: 122px;
+  height: 38px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.footer-menu h3,
+.footer-location h3,
+.footer-contact h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-menu {
+  width: 110px;
+  padding-top: 25px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 5px;
+}
+
+.footer-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-location {
+  width: 258px;
+  padding-top: 25px;
+}
+
+.footer-location h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.footer-contact {
+  padding-top: 25px;
+}
+
+.footer-contact img {
+  width: 24px;
+
+  vertical-align: middle;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Media Query untuk layar ponsel */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav {
+    padding: 10px 20px;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .navbar-logo h1 {
+    font-size: 10px;
+    width: 100%;
+    max-width: 120px;
+    white-space: normal; /* biar bisa turun ke bawah */
+    overflow-wrap: break-word;
+  }
+
+  .hamberger-menu {
+    display: flex;
+  }
+
+  .hamberger-menu img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 54px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0px 0px 0px 5px;
+    padding: ;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Home Section */
+  .home {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .home-logo img {
+    width: 150px;
+  }
+
+  .home-container h1 {
+    font-size: 24px;
+  }
+
+  .home-container h2 {
+    font-size: 16px;
+  }
+
+  .home-container button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  /* Sejarah Section */
+  .sejarah-container {
+    padding: 20px;
+  }
+
+  .sejarah-container h1 {
+    padding-top: 30px;
+  }
+
+  .sejarah-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .sejarah-content img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .sejarah-content .text {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Visi dan Misi Section */
+  .visidanmisi-container {
+    padding: 20px;
+  }
+
+  .visidanmisi-container h1 {
+    padding-top: 20px;
+  }
+
+  .visidanmisi-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .visidanmisi-content .text-section {
+    padding: 0px 20px;
+    text-align: center;
+    width: auto;
+  }
+
+  .visidanmisi-content .image-section {
+    padding: 20px;
+    width: auto;
+  }
+
+  .visidanmisi-content .image-group {
+    width: auto;
+    gap: 5px;
+  }
+
+  .visidanmisi-content .image-group img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Tentang Kami */
+  .tentangkami-container {
+    padding: 20px;
+  }
+
+  .tentangkami-container h1 {
+    padding-top: 20px;
+  }
+
+  /* Footer */
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 30px 60px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .footer-location {
+    padding-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-contact {
+    padding-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-contact p img {
+    width: 20px;
+    margin-right: 0px;
+  }
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  .social-icons img {
+    width: 30px;
+  }
+}

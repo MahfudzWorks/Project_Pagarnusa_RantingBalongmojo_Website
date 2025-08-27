@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 15px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.navbar-logo h1 {
+  font-size: 12px;
+  font-weight: 700;
+  width: 95px;
+  height: 28px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #03c400;
+}
+
+/* Hamberger menu */
+.hamberger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamberger-menu img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Animation */
+/* Fade-in dari kiri */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in dari kanan */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in dari atas */
+.fade-in-top {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-in dari bawah */
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-in dari pusat (membesar) */
+.fade-in-center {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-center.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Container */
+.sejarah-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sejarah-pagar-nusa {
+  display: flex;
+  max-width: 1035px;
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sejarah-pagar-nusa img {
+  width: 160px;
+  margin: 20px 0px 30px 0px;
+}
+
+.sejarah-container h1 {
+  font-size: 26px;
+  color: #1d5f1c;
+  font-weight: 900;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.daftar-ketua-umum {
+  max-width: 900px;
+  padding-top: 80px;
+}
+
+.daftar {
+  display: flex;
+  padding-top: 30px;
+  gap: 40px;
+}
+
+.daftar h2 {
+  color: #1d5f1c;
+}
+
+.daftar img {
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  gap: 20px;
+}
+
+.aliran-bela-diri {
+  max-width: 1040px;
+  padding-top: 80px;
+}
+
+.aliran-bela-diri p {
+  padding: 20px 0px;
+}
+
+.aliran-bela-diri img {
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  background-color: #103e1c;
+  color: #ffffff;
+  width: 100%;
+  height: 355px;
+  padding: 70px 100px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  width: 122px;
+  height: 38px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.footer-menu h3,
+.footer-location h3,
+.footer-contact h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-menu {
+  width: 110px;
+  padding-top: 25px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 5px;
+}
+
+.footer-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-location {
+  width: 258px;
+  padding-top: 25px;
+}
+
+.footer-location h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.footer-contact {
+  padding-top: 25px;
+}
+
+.footer-contact img {
+  width: 24px;
+
+  vertical-align: middle;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Media Query untuk layar ponsel */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav {
+    padding: 10px 20px;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .navbar-logo h1 {
+    font-size: 10px;
+    width: 100%;
+    max-width: 120px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .hamberger-menu {
+    display: flex;
+  }
+
+  .hamberger-menu img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 54px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0px 0px 0px 5px;
+    padding: ;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .sejarah-pagar-nusa {
+    padding: 70px 20px 20px 20px;
+  }
+
+  .daftar-ketua-umum {
+    padding: 20px 20px;
+  }
+
+  .daftar-ketua-umum .daftar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .daftar-ketua-umum h1 {
+    padding: 0px;
+  }
+
+  .daftar-ketua-umum img {
+    width: 200px;
+  }
+
+  .daftar-ketua-umum .info {
+    text-align: center;
+  }
+
+  .aliran-bela-diri {
+    padding: 20px 20px;
+  }
+
+  .kumpulan-aliran-img img {
+    margin-bottom: 0px;
+  }
+
+  /* Footer */
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 30px 60px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .footer-location {
+    padding-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-contact {
+    padding-top: 10px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .footer-contact p img {
+    width: 20px;
+    margin-right: 0px;
+  }
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  .social-icons img {
+    width: 30px;
+  }
+}
