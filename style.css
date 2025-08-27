@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "Roboto", Arial, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -45,16 +46,16 @@ nav {
   height: 28px;
 }
 
-nav ul {
+nav .navbar-menu {
   list-style: none;
   display: flex;
 }
 
-nav ul li {
+nav .navbar-menu li {
   margin-left: 20px;
 }
 
-nav ul li a {
+nav .navbar-menu li a {
   text-decoration: none;
   color: white;
   font-size: 14px;
@@ -62,7 +63,7 @@ nav ul li a {
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav .navbar-menu li a:hover {
   color: #03c400;
 }
 
@@ -504,7 +505,6 @@ footer {
   nav {
     padding: 10px 20px;
     flex-direction: row;
-    width: 100%;
   }
 
   .navbar-logo h1 {
@@ -524,7 +524,7 @@ footer {
     cursor: pointer;
   }
 
-  nav ul {
+  nav .navbar-menu {
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -533,21 +533,20 @@ footer {
     right: 0px;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 0px 0px 0px 5px;
-    padding: ;
-    width: 100%;
-    max-width: 200px;
+    padding: 10px;
+    width: 200px;
   }
 
-  nav ul.show {
+  nav .navbar-menu.show {
     display: flex;
   }
 
-  nav ul li {
+  nav .navbar-menu li {
     margin: 10px 0;
     text-align: center;
   }
 
-  nav ul li a {
+  nav .navbar-menu li a {
     font-size: 12px;
     color: white;
     text-decoration: none;
@@ -619,8 +618,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 100%;
-    max-width: 340px;
+    width: auto;
   }
 
   .visidanmisi-content .text-section {
@@ -636,11 +634,12 @@ footer {
 
   .visidanmisi-content .image-group {
     width: auto;
+
     gap: 5px;
   }
 
   .visidanmisi-content .image-group img {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
 
@@ -657,7 +656,7 @@ footer {
   footer {
     width: 100%;
     height: auto;
-    padding: 30px 60px;
+    padding: 40px 20px;
   }
 
   .footer-container {
