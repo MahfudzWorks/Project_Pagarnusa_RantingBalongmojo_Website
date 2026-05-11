@@ -1,0 +1,68 @@
+.visi-page {
+  padding: 120px 8% 80px;
+  background: #f8f8f8;
+  min-height: 100vh;
+}
+
+.visi-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.visi-header h1 {
+  font-size: 42px;
+  color: #0b5d1e;
+  margin-bottom: 15px;
+}
+
+.visi-header p {
+  font-size: 18px;
+  color: #555;
+}
+
+.visi-content {
+  display: flex;
+  justify-content: center;
+}
+
+.visi-text {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.visi-text h2 {
+  color: #0b5d1e;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.visi-text p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.visi-text ol {
+  padding-left: 20px;
+}
+
+.visi-text ol li {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .visi-header h1 {
+    font-size: 32px;
+  }
+
+  .visi-text {
+    padding: 25px;
+  }
+}
