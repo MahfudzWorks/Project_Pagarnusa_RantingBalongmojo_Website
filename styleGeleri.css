@@ -126,7 +126,8 @@
 }
 
 .detail-hero,
-.detail-hero-k {
+.detail-hero-k,
+.detail-hero-bs {
   position: relative;
   height: 50vh;
 
@@ -166,6 +167,20 @@
   transform: scale(1.1);
 }
 
+.detail-hero-bs::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("img/gallery/baktisosial/baktisosial.jpg")
+    center/cover no-repeat;
+
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
 .detail-hero-k-content {
   position: relative;
   z-index: 2;
@@ -180,8 +195,16 @@
   padding: 20px;
 }
 
+.detail-hero-bs-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+
 .detail-hero-content h1 
-.detail-hero-k-content h1 {
+.detail-hero-k-content h1 
+.detail-hero-bs-content h1 {
   font-size: 65px;
   margin-bottom: 18px;
   font-weight: bold;
@@ -189,7 +212,8 @@
 }
 
 .detail-hero-content p 
-.detail-hero-k-content p {
+.detail-hero-k-content p 
+.detail-hero-bs-content p {
   max-width: 750px;
   font-size: 18px;
   line-height: 1.8;
@@ -288,17 +312,20 @@
 @media screen and (max-width: 768px) {
 
   .detail-hero 
-  .detail-hero-k {
+  .detail-hero-k 
+  .detail-hero-bs {
     height: 55vh;
   }
 
   .detail-hero-content h1 
-  .detail-hero-k-content h1 {
+  .detail-hero-k-content h1 
+  .detail-hero-bs-content h1 {
     font-size: 42px;
   }
 
   .detail-hero-content p 
-  .detail-hero-k-content p {
+  .detail-hero-k-content p 
+  .detail-hero-bs-content p {
     font-size: 15px;
   }
 
