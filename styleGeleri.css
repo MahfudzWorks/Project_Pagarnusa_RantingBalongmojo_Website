@@ -125,7 +125,8 @@
   }
 }
 
-.detail-hero {
+.detail-hero,
+.detail-hero-k {
   position: relative;
   height: 50vh;
 
@@ -151,6 +152,27 @@
   transform: scale(1.1);
 }
 
+.detail-hero-k::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("img/gallery/kejuaraan/kejuaraan.jpg")
+    center/cover no-repeat;
+
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+.detail-hero-k-content {
+  position: relative;
+  z-index: 2;
+  color: black;
+  padding: 20px;
+}
+
 .detail-hero-content {
   position: relative;
   z-index: 2;
@@ -158,14 +180,16 @@
   padding: 20px;
 }
 
-.detail-hero-content h1 {
+.detail-hero-content h1 
+.detail-hero-k-content h1 {
   font-size: 65px;
   margin-bottom: 18px;
   font-weight: bold;
   text-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
-.detail-hero-content p {
+.detail-hero-content p 
+.detail-hero-k-content p {
   max-width: 750px;
   font-size: 18px;
   line-height: 1.8;
@@ -263,15 +287,18 @@
 
 @media screen and (max-width: 768px) {
 
-  .detail-hero {
+  .detail-hero 
+  .detail-hero-k {
     height: 55vh;
   }
 
-  .detail-hero-content h1 {
+  .detail-hero-content h1 
+  .detail-hero-k-content h1 {
     font-size: 42px;
   }
 
-  .detail-hero-content p {
+  .detail-hero-content p 
+  .detail-hero-k-content p {
     font-size: 15px;
   }
 
