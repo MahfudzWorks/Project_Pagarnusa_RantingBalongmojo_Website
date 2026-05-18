@@ -294,7 +294,6 @@
   transform: scale(1.03);
 }
 
-/* Overlay lebih ringan */
 .detail-card::after {
   content: "";
   position: absolute;
