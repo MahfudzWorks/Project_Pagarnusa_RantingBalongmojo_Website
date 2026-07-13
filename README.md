@@ -1,13 +1,72 @@
-# Project Pagarnusa Ranting Balongmojo Website
+# Landing Page Pagar Nusa Tech
 
-Website resmi **Pagarnusa Ranting Balongmojo** yang dibuat untuk memberikan informasi mengenai kegiatan, struktur organisasi, galeri, dan berita terbaru.  
-Dibangun menggunakan **HTML, CSS, JavaScript** (bisa disesuaikan jika pakai framework lain).
+Landing Page Pagar Nusa Tech adalah website company profile yang dibangun menggunakan HTML, CSS, dan JavaScript. Website ini bertujuan untuk memperkenalkan profil organisasi dengan tampilan modern, responsif, dan mudah digunakan.
 
----
+## Teknologi
 
-## 🚀 Fitur Utama
-- Beranda dengan informasi singkat organisasi.
-- Halaman Profil dan Struktur Organisasi.
-- Halaman Berita / Artikel kegiatan.
-- Galeri foto kegiatan.
-- Kontak dan informasi sosial media.
+- HTML5
+- CSS3
+- JavaScript
+
+## Fitur
+
+- Responsive Design
+- Modern User Interface
+- Smooth Navigation
+- Interactive Elements
+- Mobile Friendly
+
+## Halaman
+
+- 🏠 Home
+- 📖 Sejarah
+- 🎯 Visi dan Misi
+- 🏆 Prestasi
+- 🖼️ Galeri
+- 👥 Tentang Kami
+
+## Struktur Project
+
+```
+landing-page/
+│
+├── index.html
+├── sejarah.html
+├── visi-misi.html
+├── prestasi.html
+├── galeri.html
+├── tentang.html
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│
+└── README.md
+```
+
+## Tujuan
+
+Website ini dibuat sebagai media informasi dan company profile Pagar Nusa Tech agar masyarakat dapat mengenal sejarah, visi dan misi, prestasi, galeri kegiatan, serta profil organisasi melalui tampilan website yang modern.
+
+## Cara Menjalankan
+
+1. Clone repository
+
+```bash
+git clone https://github.com/username/landing-page-pagarnusa-tech.git
+```
+
+2. Masuk ke folder project
+
+```bash
+cd landing-page-pagarnusa-tech
+```
+
+3. Buka file `index.html` menggunakan browser.
+
+## Author
+
+Mahfudz Alfanani Syaviqi
